@@ -1,0 +1,137 @@
+:root{
+  --gold: #d4af37;
+  --bg: linear-gradient(180deg, #fffefc 0%, #f7f6f4 100%);
+  --card-bg: rgba(255,255,255,0.75);
+  --accent: #8b5e3c;
+  --max-width: 920px;
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: #00b35a;
+  display: flex;
+   font-size: 15pt;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  color: white;
+  padding: 15px 20px;
+  display: block;
+  text-decoration: none;
+}
+
+nav ul li:hover {
+  background-color:#bc0e0e;
+  transform: scale(1.1);
+}
+
+nav ul li ul {
+  display: none;
+  position: absolute;
+  background: #b30000;
+  padding: 0;
+  min-width: 180px;
+}
+
+nav ul li:hover ul {
+  display: block;
+
+}
+body{
+  background: var(--bg);
+  font-family: "Montserrat", sans-serif;
+  color: #000;
+  font-style: italic;
+  line-height: 1.6;
+  padding: 40px 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.wrap{
+  max-width: var(--max-width);
+  background: rgba(255,255,255,0.9);
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 10px 30px rgba(20,20,30,0.08);
+}
+
+header{
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logo{
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  background: radial-gradient(circle at 30% 30%, #fff, #f9f3e6 30%, #fde9b7 60%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(120,80,30,0.08);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 24px;
+  color: var(--accent);
+  transform: rotate(-6deg);
+}
+
+h1{
+  font-family: "Cormorant Garamond", serif;
+  font-size: 32px;
+}
+
+.lead{
+  font-size: 14px;
+  color: rgba(0,0,0,0.75);
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.gozo-card{
+  background: var(--card-bg);
+  padding: 18px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.05);
+  min-height: 120px;
+  position: relative;
+}
+
+.gozo{
+  color: var(--gold);
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.author{
+  margin-top: 10px;
+  font-size: 12px;
+  color: rgba(0,0,0,0.7);
+}
+
+.gozo-card::before{
+  content: "★";
+  position: absolute;
+  right: 12px;
+  top: 8px;
+  font-size: 20px;
+  color: rgba(212,175,55,0.12);
+}
