@@ -83,7 +83,7 @@ p {
 .imagen-contenedor {
   text-align: right; 
   margin: 20px auto; /* Centra el bloque y añade margen */
-  max-width: 90%;
+  max-width: 50%;
 
   
 }
